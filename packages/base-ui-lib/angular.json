@@ -33,6 +33,27 @@
           "defaultConfiguration": "production"
         }
       }
+    },
+    "storybook": {
+      "projectType": "application",
+      "root": "./",
+      "sourceRoot": "./src",
+      "architect": {
+        "build": {
+          "options": {
+            "tsConfig": "tsconfig.json",
+            "styles": [],
+            "scripts": []
+          }
+        },
+        "serve": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "browserTarget": "base-ui-lib:build",
+            "port": 3003
+          }
+        }
+      }
     }
   },
   "defaultProject": "base-ui-lib"
