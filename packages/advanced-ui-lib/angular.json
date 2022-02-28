@@ -1,0 +1,60 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "advanced-ui-lib": {
+      "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "advanced-ui-lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "storybook": {
+      "projectType": "application",
+      "root": "./",
+      "sourceRoot": "./src",
+      "architect": {
+        "build": {
+          "options": {
+            "tsConfig": "tsconfig.json",
+            "styles": [],
+            "scripts": []
+          }
+        },
+        "serve": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "browserTarget": "advanced-ui-lib:build",
+            "port": 7007
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "advanced-ui-lib"
+}
