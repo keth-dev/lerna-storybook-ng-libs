@@ -115,13 +115,13 @@
     "modules": [
         {
             "name": "AdvancedUiLibModule",
-            "id": "module-AdvancedUiLibModule-f228e170f7eadadda63a21df73edd4d9ee68bc2f137b43f7e16331abcc4a7c1f1405214192179d89fed5dcfc142befebda437732ee24ba56cc36368de6f47baf",
+            "id": "module-AdvancedUiLibModule-7101aa8b47918948297ddb206bd2e8092ad84b95a93881bf4cb07cc980863a95bbc8dc6248d2755b2389bc74c814366bf0dc536a02800c876fbef3362f6ccec2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/lib/advanced-ui-lib.module.ts",
             "methods": [],
-            "sourceCode": "import {NgModule} from '@angular/core';\nimport {UiLibModule} from '@keth/base-ui-lib';\nimport {AdvancedUiLibComponent} from './advanced-ui-lib.component';\nimport {AdvancedButton} from \"./AdvancedButton\";\n\n@NgModule({\n  declarations: [\n    AdvancedUiLibComponent,\n    AdvancedButton\n  ],\n  imports: [\n    UiLibModule\n  ],\n  exports: [\n    AdvancedUiLibComponent,\n    AdvancedButton\n  ]\n})\nexport class AdvancedUiLibModule {\n}\n",
+            "sourceCode": "import {NgModule} from '@angular/core';\nimport {UiLibModule} from '@keth/base-ui-lib';\nimport {AdvancedUiLibComponent} from './advanced-ui-lib.component';\nimport {AdvancedButton} from \"./AdvancedButton\";\nimport {CommonModule} from \"@angular/common\";\n\n@NgModule({\n  declarations: [\n    AdvancedUiLibComponent,\n    AdvancedButton\n  ],\n  imports: [\n    CommonModule,\n    UiLibModule\n  ],\n  exports: [\n    AdvancedUiLibComponent,\n    AdvancedButton\n  ]\n})\nexport class AdvancedUiLibModule {\n}\n",
             "children": [
                 {
                     "type": "providers",
