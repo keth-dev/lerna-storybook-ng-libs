@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { UiLibComponent } from './ui-lib.component';
-import ButtonComponent from "./button.component";
-import HeaderComponent from "./header.component";
-import PageComponent from "./page.component";
-
+import {NgModule} from '@angular/core';
+import {UiLibComponent} from './ui-lib.component';
+import {ButtonComponent} from "./button.component";
+import {HeaderComponent} from "./header.component";
+import {PageComponent} from "./page.component";
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
@@ -14,6 +14,7 @@ import PageComponent from "./page.component";
     PageComponent
   ],
   imports: [
+    CommonModule
   ],
   exports: [
     UiLibComponent,
@@ -22,4 +23,5 @@ import PageComponent from "./page.component";
     PageComponent
   ]
 })
-export class UiLibModule { }
+export class UiLibModule {
+}

@@ -2,26 +2,26 @@ import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { within, userEvent } from '@storybook/testing-library';
 import { CommonModule } from '@angular/common';
 
-import Button from './button.component';
-import Header from './header.component';
-import Page from './page.component';
+import {ButtonComponent} from './button.component';
+import {HeaderComponent} from './header.component';
+import {PageComponent} from './page.component';
 
 export default {
   title: 'Example/Page',
-  component: Page,
+  component: PageComponent,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/angular/configure/story-layout
     layout: 'fullscreen',
   },
   decorators: [
     moduleMetadata({
-      declarations: [Button, Header],
+      declarations: [ButtonComponent, HeaderComponent],
       imports: [CommonModule],
     }),
   ],
 } as Meta;
 
-const Template: Story<Page> = (args: Page) => ({
+const Template: Story<PageComponent> = (args: PageComponent) => ({
   props: args,
 });
 

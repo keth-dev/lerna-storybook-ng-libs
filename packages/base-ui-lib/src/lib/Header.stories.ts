@@ -2,15 +2,15 @@ import { moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import type { Story, Meta } from '@storybook/angular';
 
-import Button from './button.component';
-import Header from './header.component';
+import {ButtonComponent} from './button.component';
+import {HeaderComponent} from './header.component';
 
 export default {
   title: 'Example/Header',
-  component: Header,
+  component: HeaderComponent,
   decorators: [
     moduleMetadata({
-      declarations: [Button],
+      declarations: [ButtonComponent],
       imports: [CommonModule],
     }),
   ],
@@ -20,7 +20,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<Header> = (args: Header) => ({
+const Template: Story<HeaderComponent> = (args: HeaderComponent) => ({
   props: args,
 });
 

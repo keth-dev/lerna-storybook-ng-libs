@@ -1,5 +1,5 @@
 {
-  "name": "base-ui-lib",
+  "name": "@keth/base-ui-lib",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",

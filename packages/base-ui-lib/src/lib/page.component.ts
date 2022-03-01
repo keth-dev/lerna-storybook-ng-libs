@@ -60,7 +60,7 @@ import { User } from './User';
   </article>`,
   styleUrls: ['./page.css'],
 })
-export default class PageComponent {
+export class PageComponent {
   user: User | null = null;
 
   doLogout() {

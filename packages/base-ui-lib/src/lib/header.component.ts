@@ -27,7 +27,7 @@ import { User } from './User';
       <div>
         <div *ngIf="user">
           <span class="welcome">
-            Welcome, <b>{{ user.name }}</b
+            Welcome
             >!
           </span>
           <base-ui-lib-storybook-button
@@ -47,9 +47,8 @@ import { User } from './User';
           ></base-ui-lib-storybook-button>
           <base-ui-lib-storybook-button
             *ngIf="!user"
-            primary
             size="small"
-            primary="true"
+            [primary]="true"
             class="margin-left"
             (onClick)="onCreateAccount.emit($event)"
             label="Sign up"
@@ -60,7 +59,7 @@ import { User } from './User';
   </header>`,
   styleUrls: ['./header.css'],
 })
-export default class HeaderComponent {
+export class HeaderComponent {
   @Input()
   user: User | null = null;
 

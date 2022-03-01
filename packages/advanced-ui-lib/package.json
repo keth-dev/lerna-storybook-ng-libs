@@ -1,5 +1,5 @@
 {
-  "name": "advanced-ui-lib",
+  "name": "@keth/advanced-ui-lib",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,7 +19,8 @@
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
     "rxjs": "~7.5.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@keth/base-ui-lib": "1.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
@@ -38,6 +39,7 @@
     "@angular/router": "~13.2.0",
     "@babel/core": "^7.17.5",
     "@compodoc/compodoc": "^1.1.19",
+    "@keth/base-ui-lib": "1.0.0",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
