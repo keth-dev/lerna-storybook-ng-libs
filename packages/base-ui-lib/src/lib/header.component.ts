@@ -30,22 +30,22 @@ import { User } from './User';
             Welcome, <b>{{ user.name }}</b
             >!
           </span>
-          <storybook-button
+          <base-ui-lib-storybook-button
             *ngIf="user"
             size="small"
             (onClick)="onLogout.emit($event)"
             label="Log out"
-          ></storybook-button>
+          ></base-ui-lib-storybook-button>
         </div>
         <div *ngIf="!user">
-          <storybook-button
+          <base-ui-lib-storybook-button
             *ngIf="!user"
             size="small"
             class="margin-left"
             (onClick)="onLogin.emit($event)"
             label="Log in"
-          ></storybook-button>
-          <storybook-button
+          ></base-ui-lib-storybook-button>
+          <base-ui-lib-storybook-button
             *ngIf="!user"
             primary
             size="small"
@@ -53,7 +53,7 @@ import { User } from './User';
             class="margin-left"
             (onClick)="onCreateAccount.emit($event)"
             label="Sign up"
-          ></storybook-button>
+          ></base-ui-lib-storybook-button>
         </div>
       </div>
     </div>
